@@ -1,49 +1,26 @@
-body, html {
+body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Evita rolagem */
     font-family: Arial, sans-serif;
-    block-size: auto;
-    color: aliceblue;
-}
-
-/* Configurações do vídeo */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
-}
-
-/* Estilos do conteúdo */
-.content {
-    position: relative;
-    z-index: 1;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: white;
-    height: 100vh;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Fundo transparente escuro para legibilidade */
+    justify-content: center;
+    height: 100vh; /* Ajusta a altura da página para preencher a tela */
+    background: #000; /* Cor de fundo escura para contraste com o vídeo */
 }
 
 nav {
     position: absolute;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.795);
     display: flex;
     justify-content: center;
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.664);
     z-index: 1;
 }
 
@@ -58,46 +35,103 @@ nav a:hover {
     text-decoration: underline;
 }
 
-
-
-.text-center {
+.video-background {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.text-center, .horarios {
+    position: relative;
     z-index: 1;
+    text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro translúcido para legibilidade */
     border-radius: 10px;
+    margin: 20px;
+    width: 80%;
 }
 
 .text-center h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 28px;
 }
 
 .text-center p {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 10px;
 }
 
+.horarios {
+    margin-top: 40px; /* Espaçamento entre as seções */
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Fundo escuro translúcido para melhor contraste */
+    border-radius: 10px;
+    width: 80%;
+    color: #ffffff; /* Cor branca brilhante para maior visibilidade */
+}
+
+.horarios p {
+    font-size: 24px; /* Tamanho maior da fonte para destacar */
+    font-weight: bold; /* Fonte em negrito para melhor legibilidade */
+    margin: 10px 0; /* Espaçamento entre as linhas */
+}
+
+.horarios p:first-child {
+    font-size: 28px; /* Tamanho da fonte maior para o título "Horários dos Cultos" */
+    text-decoration: underline; /* Sublinhar o título para destaque adicional */
+}
+
+/* Estilização para os links de redes sociais */
+.social-links {
+    position: relative;
+    z-index: 1;
+    margin-top: 40px; /* Espaçamento acima dos ícones */
+    text-align: center;
+}
+
+.social-links a {
+    color: white;
+    font-size: 2.5rem; /* Tamanho dos ícones */
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff0000; /* Cor ao passar o mouse, altere conforme desejado */
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .text-center h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
-    .text-center p {
-        font-size: 16px;
+    .text-center p, .horarios p {
+        font-size: 14px;
+    }
+
+    .social-links a {
+        font-size: 2rem; /* Reduzir o tamanho dos ícones em telas menores */
     }
 }
 
 @media (max-width: 480px) {
     .text-center h1 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
-    .text-center p {
-        font-size: 14px;
+    .text-center p, .horarios p {
+        font-size: 12px;
+    }
+
+    .social-links a {
+        font-size: 1.5rem; /* Ajuste do tamanho dos ícones em telas pequenas */
     }
 }

@@ -4,123 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="Videos/logo 2.png" type="image/x-icon">
     <style>
-                body {
+        body {
             font-family: Arial, sans-serif;
             background-color: #ffffff;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
+            position: relative;
+            color: white;
         }
+
         .contact {
-  background-color: #202020d0;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(252, 251, 251, 0.459);
-  padding: 20px;
-  text-align: center;
-}
-.contact h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-.contact p {
-  font-size: 18px;
-  margin: 10px 0;
-}
-.contact {
-  font-weight: bold;
-  color: #007bff;
-}
-.back-button {
-    display: flow-root;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-            background-color: #0056b3;
+            background-color: rgba(32, 32, 32, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(252, 251, 251, 0.459);
+            padding: 20px;
+            text-align: center;
+            z-index: 2;
         }
+
+        .contact h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #e1e8ff;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
         .back-button:hover {
             background-color: #9003d1;
         }
+
         .video-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
 
-.video-bg video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
+        .video-bg video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
 
-
-.instagram-link {
+        .instagram-link {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-top: 10px;
         }
+
         .instagram-link img {
             width: 20px;
             height: 20px;
             margin-right: 5px;
-            filter: hue-rotate(190deg); /* Aplica uma tonalidade azul ao ícone */
         }
-        .instagram-link a {
-            color: #ffffff; /* Cor azul para o texto */
-            background-color: #0056b3;
-        }
-        .instagram:hover {
-            background-color: #9003d1; }
 
+        .instagram-link a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #0056b3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .instagram-link a:hover {
+            background-color: #9003d1;
+        }
+
+        /* Estilização para os links de redes sociais */
+        .social-links {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 2.5rem;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff0000;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .social-links a {
+                font-size: 2rem;
+            }
+
+            .contact {
+                padding: 15px;
+            }
+
+            .contact h2 {
+                font-size: 20px;
+            }
+
+            .contact p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-links a {
+                font-size: 1.5rem;
+            }
+
+            .contact h2 {
+                font-size: 18px;
+            }
+
+            .contact p {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="contact">
         <h2>Contacto</h2>
         <div class="contact-info">
-            <div class="info-item">
-                <p><strong> <b>Nombre:</strong> Pr.Wanderson </p>
-            </div>
-            <div class="info-item">
-                <p><strong> Teléfono:</strong> +34 634 26 05 65</p>
-            </div>
-            <div class="info-item">
-                <p><strong>Email:</strong> minhavidanaeuropa@gmail.com</p>
-            </div>
-            
-            <div class="info-item">
-                <p>En caso de que quiera contactarnos, aquí tiene nuestra información 👆</p></b>
-                <br>
-                <div class="info-item instagram-link">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                    <a href="https://www.instagram.com/arcadaalianca_bc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Pulse en Instagram</a>
-                </div>
-                <a href="index.html" class="back-button">Volver al Inicio</a>
-            </div>
-            
+            <p><strong>Nombre:</strong> Pr. Wanderson</p>
+            <p><strong>Teléfono:</strong> +34 634 26 05 65</p>
+            <p><strong>Email:</strong> minhavidanaeuropa@gmail.com</p>
+            <p>En caso de que quiera contactarnos, aquí tiene nuestra información 👆</p>
+
+            <a href="index.html" class="back-button">Volver al Inicio</a>
         </div>
-        
-</div>
+    </div>
+
     <div class="video-bg">
         <video autoplay muted loop>
             <source src="Videos/Blue White Galaxy Motivational Animation Video (2).mp4" type="video/mp4">
         </video>
+    </div>
+
+    <!-- Links de Redes Sociais -->
+    <div class="social-links">
+        <a href="https://www.youtube.com/@I.A.A.M.C.A" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/arcadaalianca_bc/" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61551889923203" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
     </div>
 </body>
 </html>
