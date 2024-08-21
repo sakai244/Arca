@@ -14,7 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #000; /* Fundo escuro para contraste */
+            background-color: #000; /* Fondo oscuro para contraste */
             overflow: hidden;
         }
         .container {
@@ -49,7 +49,7 @@
             z-index: 1;
             text-align: center;
             color: white;
-            background: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido para legibilidade */
+            background: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido para legibilidad */
             border-radius: 10px;
             padding: 20px;
             height: 100%;
@@ -66,7 +66,7 @@
             justify-content: center;
         }
         .gallery-item {
-            flex: 1 1 calc(25% - 20px); /* Ajusta para 4 colunas, subtraindo o espaço entre os itens */
+            flex: 1 1 calc(25% - 20px); /* Ajusta para 4 columnas, restando el espacio entre los elementos */
             max-width: calc(25% - 20px);
             overflow: hidden;
             border-radius: 10px;
@@ -99,7 +99,7 @@
         }
         @media screen and (max-width: 768px) {
             .gallery-item {
-                flex: 1 1 calc(50% - 20px); /* Ajusta para 2 colunas em telas menores */
+                flex: 1 1 calc(50% - 20px); /* Ajusta para 2 columnas en pantallas más pequeñas */
                 max-width: calc(50% - 20px);
             }
             .gallery h1 {
@@ -108,7 +108,7 @@
         }
         @media screen and (max-width: 480px) {
             .gallery-item {
-                flex: 1 1 100%; /* Ajusta para 1 coluna em telas muito pequenas */
+                flex: 1 1 100%; /* Ajusta para 1 columna en pantallas muy pequeñas */
                 max-width: 100%;
             }
             .gallery h1 {
@@ -122,25 +122,25 @@
         <div class="video-bg">
             <video autoplay muted loop>
                 <source src="seu-video.mp4" type="video/mp4">
-                Seu navegador não suporta o vídeo.
+                Su navegador no soporta el vídeo.
             </video>
         </div>
         <div class="gallery">
             <h1>Galería</h1>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="imagem1.jpg" alt="Imagem 1">
+                    <img src="imagem1.jpg" alt="Imagen 1">
                 </div>
                 <div class="gallery-item">
-                    <img src="imagem2.jpg" alt="Imagem 2">
+                    <img src="imagem2.jpg" alt="Imagen 2">
                 </div>
                 <div class="gallery-item">
-                    <img src="imagem3.jpg" alt="Imagem 3">
+                    <img src="imagem3.jpg" alt="Imagen 3">
                 </div>
                 <div class="gallery-item">
-                    <img src="imagem4.jpg" alt="Imagem 4">
+                    <img src="imagem4.jpg" alt="Imagen 4">
                 </div>
-                <!-- Adicione mais itens conforme necessário -->
+                <!-- Agrega más elementos según sea necesario -->
             </div>
             <a href="index.html" class="back-button">Volver al Inicio</a>
         </div>
