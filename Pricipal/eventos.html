@@ -67,7 +67,7 @@
 
         .highlight-event img, .event img {
             width: 100%; /* Responsivo */
-            max-width: 100%; /* Garante que a imagem nunca ultrapasse o contêiner */
+            max-width: 600px; /* Limita a largura máxima das imagens */
             height: auto; /* Mantém a proporção original da imagem */
             border-radius: 10px;
             object-fit: contain; /* Garante que a imagem fique completa sem cortes */
@@ -103,6 +103,9 @@
             .highlight-event p, .event p {
                 font-size: 16px;
             }
+            .highlight-event img, .event img {
+                max-width: 90%; /* Ajuste para telas médias */
+            }
         }
 
         @media screen and (max-width: 480px) {
@@ -111,6 +114,9 @@
             }
             .highlight-event p, .event p {
                 font-size: 14px;
+            }
+            .highlight-event img, .event img {
+                max-width: 100%; /* Ajuste para telas pequenas */
             }
         }
     </style>
