@@ -2,10 +2,56 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Evita el zoom y la rotura de la maquetación -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <title>Arca de la Alianza - Página 2</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="shortcut icon" href="Videos/logo 2.png" type="image/x-icon">
+    <style>
+        /* Evitar el desbordamiento de los elementos en el diseño */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        }
+
+        /* Ajustes adicionales de CSS para mantener la maquetación */
+        .text-center {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em; /* Usa unidades relativas */
+        }
+
+        .horarios {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em; /* Usa unidades relativas */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em; /* Usa unidades relativas */
+        }
+
+        .video-background {
+            position: fixed; /* Mantén el video fijo en el fondo */
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover; /* Asegura que el video cubra el área de la pantalla */
+            z-index: -1; /* Coloca el video debajo del contenido */
+        }
+    </style>
 </head>
 <body>
     <!-- Menú de navegación -->
@@ -16,11 +62,13 @@
         <a href="eventos.html">Eventos</a>
     </nav>
 
+    <!-- Video de fondo -->
     <video class="video-background" autoplay muted loop>
         <source src="Videos/dourado 3 (1).mp4" type="video/mp4">
         Su navegador no soporta el video.
     </video>
 
+    <!-- Contenido centralizado -->
     <div class="text-center">
         <h1>Bienvenido a la Arca de la Alianza</h1>
         <p>
@@ -34,6 +82,7 @@
         </p>
     </div>
 
+    <!-- Horarios de los cultos -->
     <div class="horarios">
         <p><strong>Horarios de los Cultos:</strong></p>
         <p>Miércoles a las 19h</p>

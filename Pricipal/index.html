@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Bloquear zoom con user-scalable=no -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iglesia Arca de la Alianza</title>
     <!-- Estilo CSS -->
     <link rel="stylesheet" href="style.css">
@@ -10,67 +10,22 @@
 
     <!-- Font Awesome para los íconos -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <style>
-        /* Evitar scroll horizontal */
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Evita que la página se desplace */
-            touch-action: none; /* Evita el movimiento del contenido en pantallas táctiles */
-            font-family: Arial, sans-serif; /* Fuente por defecto */
-        }
-
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Asegura que el video cubra toda la pantalla */
-            z-index: -1; /* Video detrás del contenido */
-        }
-
-        .content {
-            position: relative;
-            z-index: 10; /* Asegura que el contenido esté sobre el video */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            color: white;
-            text-align: center;
-        }
-
-        .content h1 {
-            font-size: 48px;
-            margin: 0;
-        }
-
-        .content p {
-            font-size: 24px;
-            margin: 10px 0;
-        }
-
-        .hidden {
-            display: none; /* Oculta el enlace "Entrar" */
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Vídeo de fondo -->
+    <!-- Vídeo de fundo -->
     <video class="video-background" autoplay muted loop>
         <source src="Videos/Black Liquid Motivational Reminder Quote Video.mp4" type="video/mp4">
         Tu navegador no soporta el vídeo.
     </video>
 
+
+
     <!-- Contenido principal -->
     <div class="content">
         <h1>Iglesia Arca de la Alianza</h1>
         <p>¡Bienvenido a nuestra comunidad!</p>
-        <!-- Remover o ajustar el enlace de "Entrar" según sea necesario -->
+        <!-- Remover ou ajustar o link de "Entrar" conforme necessário -->
         <a href="Segundario.html" class="hidden">Entrar</a>
     </div>
 
