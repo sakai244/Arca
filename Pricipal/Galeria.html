@@ -9,68 +9,62 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background-color: #000; /* Fondo oscuro para contraste */
-            overflow: hidden;
-        }
-        .container {
-            position: relative;
-            width: 90%;
-            max-width: 1200px;
-            height: 80%;
-            max-height: 800px;
-        }
-        .video-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-        .video-bg video {
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
-        .gallery {
-            position: relative;
-            z-index: 1;
-            text-align: center;
             color: white;
+            overflow-x: hidden; /* Evita el scroll horizontal */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .highlight-image {
+            width: 100%;
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer; /* Añade el cursor de mano */
+        }
+
+        .gallery {
+            text-align: center;
             background: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido para legibilidad */
             border-radius: 10px;
             padding: 20px;
-            height: 100%;
             overflow: auto;
         }
+
         .gallery h1 {
             font-size: 36px;
             margin-bottom: 20px;
         }
+
         .gallery-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
         }
+
         .gallery-item {
             flex: 1 1 calc(25% - 20px); /* Ajusta para 4 columnas, restando el espacio entre los elementos */
             max-width: calc(25% - 20px);
             overflow: hidden;
             border-radius: 10px;
         }
+
         .gallery-item img {
             width: 100%;
             height: auto;
@@ -78,10 +72,13 @@
             border-radius: 10px;
             object-fit: cover;
             transition: transform 0.3s ease;
+            cursor: pointer; /* Añade el cursor de mano */
         }
+
         .gallery-item img:hover {
             transform: scale(1.05);
         }
+
         .back-button {
             display: inline-block;
             margin-top: 20px;
@@ -94,23 +91,76 @@
             font-size: 16px;
             cursor: pointer;
         }
+
         .back-button:hover {
             background-color: #0056b3;
         }
+
+        /* Estilos para pantalla completa */
+        .fullscreen {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .fullscreen .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .fullscreen .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .fullscreen .prev-button {
+            left: 30px;
+        }
+
+        .fullscreen .next-button {
+            right: 30px;
+        }
+
         @media screen and (max-width: 768px) {
             .gallery-item {
                 flex: 1 1 calc(50% - 20px); /* Ajusta para 2 columnas en pantallas más pequeñas */
                 max-width: calc(50% - 20px);
             }
+
             .gallery h1 {
                 font-size: 28px;
             }
         }
+
         @media screen and (max-width: 480px) {
             .gallery-item {
                 flex: 1 1 100%; /* Ajusta para 1 columna en pantallas muy pequeñas */
                 max-width: 100%;
             }
+
             .gallery h1 {
                 font-size: 24px;
             }
@@ -119,31 +169,104 @@
 </head>
 <body>
     <div class="container">
-        <div class="video-bg">
-            <video autoplay muted loop>
-                <source src="seu-video.mp4" type="video/mp4">
-                Su navegador no soporta el vídeo.
-            </video>
+        <h1 style="text-align: center;">Galería</h1>
+        <!-- Imagen de destaque -->
+        <div class="highlight-image">
+            <img src="Galeria/Principal.jpg" alt="Imagen de Destaque" onclick="openFullscreen(this)"> <!-- Reemplaza con tu imagen de destaque -->
         </div>
+
+        <!-- Galería -->
         <div class="gallery">
-            <h1>Galería</h1>
+           
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="imagem1.jpg" alt="Imagen 1">
+                    <img src="Galeria/0b1c33b7db81945cdae65a998989f1e1-large.jpg" alt="Imagen 1" onclick="openFullscreen(this)"> <!-- Reemplaza con tus imágenes -->
                 </div>
                 <div class="gallery-item">
-                    <img src="imagem2.jpg" alt="Imagen 2">
+                    <img src="Galeria/1732fe4a89c0082eb6ed51c2c80edd72-large.jpg" alt="Imagen 2" onclick="openFullscreen(this)">
                 </div>
                 <div class="gallery-item">
-                    <img src="imagem3.jpg" alt="Imagen 3">
+                    <img src="Galeria/2e7ee75f8610aee46027bcca16ed26f0-large.jpg" alt="Imagen 3" onclick="openFullscreen(this)">
                 </div>
                 <div class="gallery-item">
-                    <img src="imagem4.jpg" alt="Imagen 4">
+                    <img src="Galeria/2a0c60eec4d483b606b07836524824f4-large.jpg" alt="Imagen 4" onclick="openFullscreen(this)">
                 </div>
+                <div class="gallery-item">
+                    <img src="Galeria/4dfab20d75fd76cac492ad129798f659-large.jpg" alt="Imagen 4" onclick="openFullscreen(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="Galeria/5585bcf851016eb582d2ac49c476dd6f-large.jpg" alt="Imagen 4" onclick="openFullscreen(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="Galeria/5868a970e824e6663f9e163202959552-large.jpg" alt="Imagen 4" onclick="openFullscreen(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="Galeria/5dace6b485eb496eb777071fc3ad304a-large.jpg" alt="Imagen 4" onclick="openFullscreen(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="Galeria/6f866d3a0850b8b3f98ba2b05810b9df-large.jpg" alt="Imagen 4" onclick="openFullscreen(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="Galeria/82008f9208157865c7a3934a94a05cc7-xxlarge.jpg" alt="Imagen 4" onclick="openFullscreen(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="Galeria/9e9082a84ca62a150f1234f515fc79f5-large.jpg" alt="Imagen 4" onclick="openFullscreen(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="Galeria/femea dançando.jpg" alt="Imagen 4" onclick="openFullscreen(this)">
+                </div>
+              
+                
                 <!-- Agrega más elementos según sea necesario -->
             </div>
             <a href="index.html" class="back-button">Volver al Inicio</a>
         </div>
     </div>
+
+    <!-- Contenedor de pantalla completa -->
+    <div class="fullscreen" id="fullscreen">
+        <span class="close-button" onclick="closeFullscreen()">×</span>
+        <button class="nav-button prev-button" onclick="prevImage()">❮</button>
+        <img src="" alt="Imagen en Pantalla Completa" id="fullscreen-image">
+        <button class="nav-button next-button" onclick="nextImage()">❯</button>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.gallery-item img, .highlight-image img');
+        let currentImageIndex = 0;
+
+        // Función para abrir la imagen en pantalla completa
+        function openFullscreen(element) {
+            const fullscreenDiv = document.getElementById('fullscreen');
+            const fullscreenImage = document.getElementById('fullscreen-image');
+            fullscreenImage.src = element.src;
+            fullscreenDiv.style.display = 'flex';
+            currentImageIndex = Array.from(images).indexOf(element); // Guardar el índice de la imagen actual
+        }
+
+        // Función para cerrar la imagen en pantalla completa
+        function closeFullscreen() {
+            const fullscreenDiv = document.getElementById('fullscreen');
+            fullscreenDiv.style.display = 'none';
+        }
+
+        // Función para mostrar la imagen anterior
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateFullscreenImage();
+        }
+
+        // Función para mostrar la siguiente imagen
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateFullscreenImage();
+        }
+
+        // Función para actualizar la imagen en pantalla completa
+        function updateFullscreenImage() {
+            const fullscreenImage = document.getElementById('fullscreen-image');
+            fullscreenImage.src = images[currentImageIndex].src;
+        }
+    </script>
 </body>
 </html>
