@@ -1,4 +1,8 @@
 
+body {
+    overflow: hidden;
+    touch-action: none;
+}
 
 body, html {
     margin: 0;
